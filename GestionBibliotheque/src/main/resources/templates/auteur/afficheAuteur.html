@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<title>Afficher auteur</title>
+</head>
+
+<body>
+  <h1>Details auteur</h1>
+    <p th:text="'nom: ' + ${auteur.nom}" />
+    <p th:text="'prenom: ' + ${auteur.prenom}" />
+    <p>Liste des livres</p>
+	<div th:each="livre : ${auteur.livres}">
+       <p th:text="'Titre:' +${livre.titre}"></p>
+       <p th:text="'Description: '+${livre.description}"></p>
+    </div>
+    <p><a th:href="@{/auteurs/edit/{id}(id=${auteur.id})}">Modifier</a></p>
+	<p><a th:href="@{/auteurs/delete/{id}(id=${auteur.id})}">Supprimer</a></p>
+    <p><a href="/auteurs/formulaire">Ajouter un nouvel auteur</a></p>
+    <p><a href="/auteurs/">Page de menu</a></p>
+</body>
+
+</html>

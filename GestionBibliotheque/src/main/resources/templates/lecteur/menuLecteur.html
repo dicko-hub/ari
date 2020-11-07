@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<title>Menu</title>
+</head>
+
+<body>
+	<h2>Bienvenue sur la page de gestion des lecteurs</h2>
+	<a href="/lecteurs/list">Liste lecteurs</a>  <a href="/lecteurs/formulaire">Ajouter un lecteur</a>
+	<p><a href="/lecteurs/search">Rechercher un lecteur</a></p>
+	
+	<p>Cliquez <a th:href="@{/home}">ici</a> pour l'accueil</p>
+	<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Se deconnecter"/>
+    </form>
+</body>
+
+</html>

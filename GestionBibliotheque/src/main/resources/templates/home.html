@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title th:text="#{home.title}"></title>
+    </head>
+    <body>
+		<a href="/home?lang=fr">FR</a> <a href="/home?lang=en">EN</a>
+        <h1><span th:text="#{home.hi}+' '"></span>[[${#httpServletRequest.remoteUser}]]</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" th:value="#{lang.logout}"/>
+        </form>
+        <p><a th:text="#{lang.click}" th:href="@{/lecteurs}" ></a><span th:text="' '+#{lang.readers}"></span></p>
+        <p><a th:text="#{lang.click}" th:href="@{/auteurs}" ></a><span th:text="' '+#{lang.writers}"></span></p>
+        <p><a th:text="#{lang.click}" th:href="@{/livres}" ></a><span th:text="' '+#{lang.books}"></span></p>
+        
+    </body>
+</html>

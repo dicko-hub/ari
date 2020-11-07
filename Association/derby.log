@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Sep 28 17:10:50 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0174-d544-31d0-00000db89900 
+on database directory /home/m2ipint/dicko/databases/jpaAssociations with class loader sun.misc.Launcher$AppClassLoader@27c170f0 
+Loaded from file:/home/m2ipint/dicko/Programs/db-derby-10.13.1.1-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_212-b10
+user.dir=/home/m2ipint/dicko/Documents/ARI/Workspace/jpa
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-48-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

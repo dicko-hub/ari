@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<title>Afficher lecteur</title>
+</head>
+
+<body>
+  <h1>Details lecteur</h1>
+    <p th:text="'nom: ' + ${lecteur.nom}" />
+    <p th:text="'prenom: ' + ${lecteur.prenom}" />
+    <p th:text="'age: '+${lecteur.age}"/>
+    <p><a th:href="@{/lecteurs/edit/{id}(id=${lecteur.id})}">Modifier</a></p>
+	<p><a th:href="@{/lecteurs/delete/{id}(id=${lecteur.id})}">Supprimer</a></p>
+    <p><a href="/lecteurs/formulaire">Ajouter un nouveau lecteur</a></p>
+    <p><a href="/lecteurs/">Page de menu</a></p>
+</body>
+
+</html>

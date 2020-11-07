@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Rechercher un auteur</title>
+</head>
+<body>
+	<span th:if="${message != null}"><p th:text="${message}" /></span>
+	<form action="/auteurs/search"  method="post">
+	    <label for="nom">Nom : </label>
+	    <input type="text" id="nom" name ="nom" placeholder="Nom" >
+	    <br>
+	    <label for="prenom">Prenom</label>
+	    <input type="text"  id="prenom" name="prenom" placeholder="prenom" >
+	    <br>
+	    <input type="submit" value="Ouvrir auteur">
+	</form>
+	<p><a href="/auteurs/">Page de menu</a></p>
+</body>
+</html>

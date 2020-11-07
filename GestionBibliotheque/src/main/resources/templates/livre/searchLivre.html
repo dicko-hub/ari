@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Rechercher un livre</title>
+</head>
+<body>
+	<span th:if="${message != null}"><p th:text="${message}" /></span>
+	<form action="/livres/search"  method="post">
+	    <label for="titre">Titre : </label>
+	    <input type="text" id="titre" name ="titre" placeholder="Titre" >
+	    <br>
+	    <input type="submit" value="Ouvrir livre">
+	</form>
+	<p><a href="/livres/">Page de menu</a></p>
+</body>
+</html>

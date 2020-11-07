@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<title>Ajouter un livre</title>
+</head>
+    <body>
+        <form action="#" th:action="@{/livres/add}" th:object="${livre}" method="post" id="form">
+		    <label for="titre">Titre : </label>
+		    <input type="text" th:field="*{titre}" id="titre" placeholder="Titre">
+		    <span th:if="${#fields.hasErrors('titre')}" th:errors="*{titre}"></span>
+		    <br>
+		    <label for="description">Description</label>
+		    <textarea  th:field = "*{description}" form = "form" id ="description" 
+		    placeholder="Description" >... </textarea>
+		    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+		    <br>
+		    <label for="choix">Selection des auteurs</label>
+			<select  th:field="*{auteurs}" id="choix" multiple>
+			    <option th:each="auteur :${auteurs}"
+			            th:value="${auteur.id}"
+			            th:text="${auteur.nom}+ ' ' + ${auteur.prenom}">
+			
+			    </option>
+			</select>
+		    <br>
+		    <input type="submit" value="Ajouter livre">
+		</form>
+		<p><a href="/livres/">Page de menu</a></p>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<title>Menu</title>
+</head>
+
+<body>
+	<h2>Bienvenue sur la page de gestion des auteurs</h2>
+	<a href="/auteurs/list">Liste auteurs</a><a href="/auteurs/formulaire">Ajouter un auteur</a>
+	<p><a href="/auteurs/search">Rechercher un auteur</a></p>
+	<p>Cliquez <a th:href="@{/home}">ici</a> pour l'accueil</p>
+	<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Se deconnecter"/>
+     </form>
+</body>
+
+</html>
