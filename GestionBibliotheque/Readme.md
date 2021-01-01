@@ -16,6 +16,4 @@ il faut se loger
 
 ## Ce qui n'est pas encore développé
 - Mise en place des paramètres de connexion a une base externe dans applications.proprieties
-- Bug de dernière minute sur la fonctionnalité search dans les contrôleurs avec une erreur 403 qui
-semble être dû aux procedures de sécurité mises en place
 - Absence de CSS sur le projet
